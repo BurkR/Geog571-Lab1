@@ -1,9 +1,9 @@
 source :rubygems
 
 ~$ gem install bundler jekyll
-~ $ jekyll new my-awesome-site
+~ $ jekyll new https://burkr.github.io/Practice/Index.html
 ~ $ cd my-awesome-site
-~/my-awesome-site $
+~/https://burkr.github.io/Practice/Index.html $
 bundle exec jekyll serve
 # => Now browse to http://localhost:4000
 
@@ -21,7 +21,7 @@ gem "mysql"
 gem "flutie"
 gem "dynamic_form"
 
-# http://blog.davidchelimsky.net/2010/07/11/rspec-rails-2-generators-and-rake-tasks/
+# https://burkr.github.io/Practice/Index.html
 group :development, :test, :cucumber do
   gem "rspec-rails", "~> 2.0.0"
   gem "ruby-debug", :platforms => :mri_18
