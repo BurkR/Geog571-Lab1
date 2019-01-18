@@ -1,0 +1,14 @@
+sudo: false
+language: scala
+jdk:
+- oraclejdk8
+cache:
+  directories:
+  - "$HOME/.ivy2"
+  - "$HOME/.sbt"
+script:
+- git clone https://github.com/gitbucket/gitbucket.git
+- cd gitbucket
+- sbt publishLocal
+- cd ../
+- sbt test
