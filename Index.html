@@ -6,18 +6,23 @@
   line-height: 32px;}
 
 <!-- HEAD element containing meta information, style, and links -->
-<head>
-OR
+
     <head>
         <meta charset="utf-8">
         <title>Hello World</title>
     </head>
-    
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>  OR  <script src="jquery.js"></script>
     <h1 id="headtext">Body Heading</h1>
 <p id="foo">This is my first HTML paragraph.</p>
 <p id="bar">This is my second HTML paragraph. CSS can be added to style your website in one of a few ways. You can apply CSS to individual elements, embed it within your HTML document, or create a separate CSS file and link it to your HTML document. In your file, add the following link in head section of your document.
 
 <link href="css/main.css" rel="stylesheet" /></p>
+  
+  Note: although there are no performance implications with having multiple $(function() {}) calls, it is a common practice to attach only one call to the document.
+
+$( document ).ready(function() {
+  alert( 'ready!' );
+});
 
     <body>{text-align: center; <h1>Hello World</h1> }<!-- not sure about the } tag placement -->
         
@@ -65,7 +70,10 @@ or
 
 } </P></div></div>
 
-
+  <--Both of the following examples of Javascript are equivalent and will select all <li></li> elements on the page.-->
+var $listItems = jquery('li');
+  var $listItems = $('li');
+  
 <div><p>      
 #*This text will be italic*
 _This will also be italic_
@@ -84,7 +92,41 @@ _You **can** combine them_
   
 
   </p></div>
+The jQuery syntax is tailor-made for selecting HTML elements and performing some action on the element(s).
 
+Basic syntax is: $(selector).action()
+
+A $ sign to define/access jQuery A (selector) to "query (or find)" HTML elements A jQuery action() to be performed on the element(s) Examples:
+
+$(this).hide() - hides the current element.
+
+$("p").hide() - hides all <p> elements.
+
+$(".test").hide() - hides all elements with class="test".
+
+$("#test").hide() - hides the element with id="test".
+  
+  The next step is to define what should happen when the event fires. You must pass a function to the event:
+
+$("p").click(function(){
+  // action goes here!!
+  alert("You entered p1!");
+  $(this).hide();
+});
+  
+  Attach multiple event handlers to a <p> element:
+
+$("p").on({
+    mouseenter: function(){
+        $(this).css("background-color", "lightgray");
+    },
+    mouseleave: function(){
+        $(this).css("background-color", "lightblue");
+    },
+    click: function(){
+        $(this).css("background-color", "yellow");
+    }
+});
 <div>
 ##**HTML Lists:**
 <!-- UL defines an unordered list -->
