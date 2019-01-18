@@ -239,3 +239,5 @@ plugins:
   - jekyll-sitemap
 
 # _Conf Code file courtesy of: Beautiful Jekyll / Dean Attali at: https://github.com/daattali/beautiful-jekyll/blob/master/_config.yml
+
+theme: jekyll-theme-cayman
