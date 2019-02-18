@@ -1,0 +1,24 @@
+{
+  "addons": [
+
+  ],
+  "buildpacks": [
+    {
+      "url": "buildpack-dyno"
+    },
+    {
+      "url": "practice/heroku/node.js"
+    }
+  ],
+  "description": "dyno-json",
+  "env": {
+    "2": "100%"
+  },
+  "formation": {
+  },
+  "name": "json-file",
+  "scripts": {
+    "postdeploy": "script-dyno"
+  },
+  "stack": "heroku-18"
+}
